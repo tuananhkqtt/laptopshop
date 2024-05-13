@@ -13,7 +13,6 @@ import com.tuananh.laptopshop.domain.User;
 import com.tuananh.laptopshop.service.UploadService;
 import com.tuananh.laptopshop.service.UserService;
 
-import jakarta.servlet.ServletContext;
 import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,7 +46,7 @@ public class UserController {
 
     @GetMapping("/admin/user")
     public String getUserPage(Model model) {
-        List<User> users = this.userService.getAllUser();
+        List<User> users = this.userService.getAllUsers();
         model.addAttribute("users", users);
         return "admin/user/show";
     }
