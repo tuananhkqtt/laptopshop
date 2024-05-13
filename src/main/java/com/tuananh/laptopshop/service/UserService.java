@@ -21,8 +21,7 @@ public class UserService {
     }
 
     public User handleSaveUser(User user) {
-        User newUser = this.userRepository.save(user);
-        return newUser;
+        return this.userRepository.save(user);
     }
 
     public User getUserById(long id) {
@@ -30,17 +29,14 @@ public class UserService {
     }
 
     public List<User> getAllUser() {
-        List<User> users = this.userRepository.findAll();
-        return users;
+        return this.userRepository.findAll();
     }
 
     public List<User> getAllUsersByEmail(String email) {
-        List<User> users = this.userRepository.findByEmail(email);
-        return users;
+        return this.userRepository.findByEmail(email);
     }
 
     public void deleteAUser(long id) {
-        System.out.println("delete " + id);
         this.userRepository.deleteById(id);
     }
 

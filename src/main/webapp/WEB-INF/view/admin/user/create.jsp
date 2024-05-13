@@ -8,9 +8,9 @@
                 <meta charset="utf-8" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-                <meta name="description" content="Laptopshop Project" />
-                <meta name="author" content="Nguyen Tuan Anh" />
-                <title>Create User - Laptop Shop</title>
+                <meta name="description" content="" />
+                <meta name="author" content="" />
+                <title>Create User - Laptopshop</title>
                 <link href="/css/styles.css" rel="stylesheet" />
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
                 <script>
@@ -46,20 +46,39 @@
                                             <form:form method="post" action="/admin/user/create" modelAttribute="user"
                                                 class="row" enctype="multipart/form-data">
                                                 <div class="mb-3 col-12 col-md-6">
+                                                    <c:set var="errorEmail">
+                                                        <form:errors path="email" cssClass="invalid-feedback" />
+                                                    </c:set>
                                                     <label class="form-label">Email:</label>
-                                                    <form:input type="email" class="form-control" path="email" />
+                                                    <form:input type="email"
+                                                        class="form-control ${not empty errorEmail ? 'is-invalid' : ''}"
+                                                        path="email" />
+                                                    ${errorEmail}
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">
+                                                    <c:set var="errorPassword">
+                                                        <form:errors path="password" cssClass="invalid-feedback" />
+                                                    </c:set>
                                                     <label class="form-label">Password:</label>
-                                                    <form:input type="password" class="form-control" path="password" />
+                                                    <form:input type="password"
+                                                        class="form-control ${not empty errorPassword ? 'is-invalid' : ''}"
+                                                        path="password" />
+                                                    ${errorPassword}
+
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">
                                                     <label class="form-label">Phone number:</label>
                                                     <form:input type="text" class="form-control" path="phone" />
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">
+                                                    <c:set var="errorFullName">
+                                                        <form:errors path="fullName" cssClass="invalid-feedback" />
+                                                    </c:set>
                                                     <label class="form-label">Full Name:</label>
-                                                    <form:input type="text" class="form-control" path="fullName" />
+                                                    <form:input type="text"
+                                                        class="form-control ${not empty errorFullName ? 'is-invalid' : ''}"
+                                                        path="fullName" />
+                                                    ${errorFullName}
                                                 </div>
                                                 <div class="mb-3 col-12">
                                                     <label class="form-label">Address:</label>
@@ -76,7 +95,7 @@
                                                 <div class="mb-3 col-12 col-md-6">
                                                     <label for="avatarFile" class="form-label">Avatar:</label>
                                                     <input class="form-control" type="file" id="avatarFile"
-                                                        accept=".png, .jpg, .jpeg" name="avatarFile" />
+                                                        accept=".png, .jpg, .jpeg" name="file" />
                                                 </div>
                                                 <div class="col-12 mb-3">
                                                     <img style="max-height: 250px; display: none;" alt="avatar preview"

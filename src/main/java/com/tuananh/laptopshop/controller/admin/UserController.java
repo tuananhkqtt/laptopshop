@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -13,6 +14,7 @@ import com.tuananh.laptopshop.service.UploadService;
 import com.tuananh.laptopshop.service.UserService;
 
 import jakarta.servlet.ServletContext;
+import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,22 +28,22 @@ public class UserController {
     private final UploadService uploadService;
     private final PasswordEncoder passwordEncoder;
 
-    public UserController(UploadService uploadService,
+    public UserController(
+            UploadService uploadService,
             UserService userService,
-            ServletContext servletContext,
             PasswordEncoder passwordEncoder) {
         this.userService = userService;
         this.uploadService = uploadService;
         this.passwordEncoder = passwordEncoder;
     }
 
-    @GetMapping("/")
-    public String getHomePage(Model model) {
-        List<User> users = this.userService.getAllUsersByEmail("a@gmail.com");
-        model.addAttribute("title", "test");
-        model.addAttribute("des", "This is a description.");
-        return "hello";
-    }
+    // @GetMapping("/")
+    // public String getHomePage(Model model) {
+    //     List<User> users = this.userService.getAllUsersByEmail("a@gmail.com");
+    //     model.addAttribute("title", "test");
+    //     model.addAttribute("des", "This is a description.");
+    //     return "hello";
+    // }
 
     @GetMapping("/admin/user")
     public String getUserPage(Model model) {
@@ -66,8 +68,14 @@ public class UserController {
 
     @PostMapping("/admin/user/create")
     public String createUserPage(Model model,
-            @ModelAttribute("user") User user,
-            @RequestParam("avatarFile") MultipartFile file) {
+            @ModelAttribute("user") @Valid User user,
+            BindingResult newUserBindingResult,
+            @RequestParam("file") MultipartFile file) {
+
+        if (newUserBindingResult.hasErrors()) {
+            return "admin/user/create";
+        }
+
         String avatar = this.uploadService.handleSaveUploadFile(file, "avatar");
         String hashPassword = this.passwordEncoder.encode(user.getPassword());
 

@@ -28,6 +28,7 @@ public class Order {
 
     @OneToMany(mappedBy = "order")
     private List<OrderDetail> orderDetails;
+
     public long getId() {
         return id;
     }
