@@ -9,17 +9,17 @@
   ```bash
   java --version
   ```
-  ![Kiểm tra Java version](./images/java-version.png)
+  [Kiểm tra Java version](./images/check%20java%20version.png)
 
 ### 2. Cài đặt Visual Studio Code
 - Tải VS Code: Nếu đã cài rồi thì thôi, còn chưa thì link tải ở dưới.
 
 ### 3. Cài đặt Extensions cho VS Code
 - **Extension Pack for Java**  
-  ![Extension Pack for Java](https://marketplace.visualstudio.com/items/?itemName=vscjava.vscode-java-pack)
+  [Extension Pack for Java](https://marketplace.visualstudio.com/items/?itemName=vscjava.vscode-java-pack)
 
 - **Spring Boot Extension Pack**  
-  ![Spring Boot Extension Pack](https://marketplace.visualstudio.com/items/?itemName=vmware.vscode-boot-dev-pack)
+  [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items/?itemName=vmware.vscode-boot-dev-pack)
 
 ### 4. Setup MySQL Workbench
 
@@ -40,7 +40,7 @@ Cài mysql trong link ở dưới với các lưu ý sau:
    ```
    ![Tạo database laptopshop](./images/create%20database.jpg)
 
-Link cài đặt java, vscode, mysql: https://actvneduvn-my.sharepoint.com/:f:/g/personal/at180104_actvn_edu_vn/EsgHVeL3GbFNsOjM8OfaStIBHpViPE0KmdIBVQ3IXjRLdw?e=o8xqME 
+[Cài đặt java, vscode, mysql tại đây] (https://actvneduvn-my.sharepoint.com/:f:/g/personal/at180104_actvn_edu_vn/EsgHVeL3GbFNsOjM8OfaStIBHpViPE0KmdIBVQ3IXjRLdw?e=o8xqME) 
 
 ## Chạy Chương Trình
 
