@@ -1,6 +1,17 @@
 # LaptopShop Spring MVC Project
 
-## Setup Environment
+## Giới Thiệu
+Đây là một dự án Spring MVC cho một cửa hàng laptop. Dự án này sử dụng Spring Boot, MySQL và Visual Studio Code. Bạn có thể sử dụng nó để quản lý các thông tin về laptop, người dùng và các vai trò của người dùng trong hệ thống.
+
+## Mục Lục
+1. [Cài đặt Môi Trường](#cài-đặt-môi-trường)
+   - [Cài đặt Java Version 17](#cài-java-version-17)
+   - [Cài đặt Visual Studio Code](#cài-đặt-visual-studio-code)
+   - [Cài đặt Extensions cho VS Code](#cài-đặt-extensions-cho-vs-code)
+   - [Cài đặt MySQL Workbench](#setup-mysql-workbench)
+2. [Chạy Chương Trình](#chạy-chương-trình)
+
+## Cài đặt Môi Trường
 
 ### 1. Cài Java version 17
 - Tải Java 17:
@@ -40,7 +51,7 @@ Cài mysql trong link ở dưới với các lưu ý sau:
    ```
    ![Tạo database laptopshop](./images/create%20database.jpg)
 
-[Cài đặt java, vscode, mysql tại đây] (https://actvneduvn-my.sharepoint.com/:f:/g/personal/at180104_actvn_edu_vn/EsgHVeL3GbFNsOjM8OfaStIBHpViPE0KmdIBVQ3IXjRLdw?e=o8xqME) 
+[Cài đặt java, vscode, mysql tại đây](https://actvneduvn-my.sharepoint.com/:f:/g/personal/at180104_actvn_edu_vn/EsgHVeL3GbFNsOjM8OfaStIBHpViPE0KmdIBVQ3IXjRLdw?e=o8xqME) 
 
 ## Chạy Chương Trình
 
