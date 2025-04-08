@@ -9,7 +9,7 @@
   ```bash
   java --version
   ```
-  [Kiểm tra Java version](./images/check%20java%20version.png)
+  ![Kiểm tra Java version](./images/check%20java%20version.png)
 
 ### 2. Cài đặt Visual Studio Code
 - Tải VS Code: Nếu đã cài rồi thì thôi, còn chưa thì link tải ở dưới.
