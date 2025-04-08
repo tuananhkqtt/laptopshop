@@ -44,7 +44,7 @@ public class OrderController {
             // TODO: handle exception
         }
 
-        Pageable pageable = PageRequest.of(page - 1, 1);
+        Pageable pageable = PageRequest.of(page - 1, 2);
         Page<Order> ordersPage = this.orderService.fetchAllOrders(pageable);
         List<Order> orders = ordersPage.getContent();
 
