@@ -8,7 +8,7 @@
                         <div class="col-lg-3">
                             <a href="" target="_blank">
                                 <h1 class="text-primary mb-0">Laptopshop</h1>
-                                <p class="text-secondary mb-0">@tuananh</p>
+                                <p class="text-secondary mb-0">@spring</p>
                             </a>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h4 class="text-light mb-3">Contact</h4>
-                            <p>Author: tuananhkqtt@gmail.com</p>
+                            <p>Author: spring@gmail.com</p>
                             <p>Website: <a href="" target="_blank"> laptopshop.com</a></p>
                         </div>
                     </div>
